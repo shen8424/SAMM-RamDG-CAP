@@ -11,9 +11,11 @@
 </div>
 
 ## News
+
 - [07/2025] RamDG Code is released.
 
 ## Introduction
+
 This is the official implementation of *SAMM* and *RamDG*. We propose a realistic research scenario: detecting and grounding semantic-coordinated multimodal manipulations, and introduce a new dataset SAMM. To address this challenge, we design the RamDG framework, proposing a novel approach for detecting fake news by leveraging external knowledge.
 
 The framework of the proposed RamDG:
@@ -23,6 +25,7 @@ The framework of the proposed RamDG:
 
 
 ## 🔧 Dependencies and Installation
+
 ### Download
 ```
 mkdir code
@@ -32,6 +35,7 @@ cd SAMM-RamDG-CAP
 ```
 
 ### Environment
+
 ```
 conda create -n RamDG python=3.8
 conda activate RamDG
@@ -41,6 +45,7 @@ conda install -c conda-forge ruamel_yaml
 ```
 
 ### ⏬ Prepare Checkpoint
+
 Download the pre-trained model through this link: [ALBEF_4M.pth](https://storage.googleapis.com/sfr-pcl-data-research/ALBEF/ALBEF_4M.pth) and [pytorch_model.bin](https://drive.google.com/file/d/15qfsTHPB-CkEVreOyf-056JWDAVjWK3w/view?usp=sharing)[GoogleDrive].
 
 Then put the `ALBEF_4M.pth` and `pytorch_model.bin` into `./code/SAMM-RamDG-CAP/`.
@@ -61,9 +66,131 @@ Then put the `ALBEF_4M.pth` and `pytorch_model.bin` into `./code/SAMM-RamDG-CAP/
 ```
 
 ## ⏬ Prepare Data
+
 ### Brief introduction
 
 We present <b>SAMM</b>, a large-scale dataset for Detecting and Grounding Semantic-Coordinated Multimodal Manipulation.
+
+**Dataset Statistics:**
+<div align="center">
+<img src='./samm_statistics.png' width='90%'>
+</div>
+
+### Celeb Attributes Portfolio (CAP)
+
+We present <b>CAP</b>, a large-scale database including over 80k celebrities. Each celebrity in the CAP has three associated images along with their gender, birth year, occupation, and main achievements.
+
+Two examples from CAP:
+
+### Annotations
+```
+     {
+        "text": "Philippe Claudel steps up a slots his one home advantage Argentina",
+        "fake_cls": "swap_manipulation",
+        "image": "swap_jpg/26717.jpg",
+        "id": 9,
+        "fake_image_box": [
+            941,
+            119,
+            1039,
+            238
+        ],
+        "cap_texts": {
+            "Philippe Claudel": "Philippe Claudel Gender: Male, Occupation: Writer and filmmaker, Birth year: 1962, Main achievement: Author of \"Brodeck's Report\"",
+            "Philippe": "Philippe Gender: Male, Occupation: Prince, Birth year: 1960, Main achievement: King of Belgium since 2013"
+        },
+        "cap_images": {
+            "Philippe Claudel": "people images/Philippe Claudel",
+            "Philippe": "people images/Philippe"
+        },
+        "idx_cap_texts": [
+            1,
+            0
+        ],
+        "idx_cap_images": [
+            1,
+            0
+        ],
+        "fake_text_pos": [
+            0,
+            1
+        ]
+     }
+```
+
+- `image`: The relative path to the original or manipulated image.  
+- `text`: The original or manipulated text caption.  
+- `fake_cls`: Indicates the type of manipulation (e.g., forgery, editing).  
+- `fake_image_box`: The bounding box coordinates of the manipulated region in the image.  
+- `fake_text_pos`: A list of indices specifying the positions of manipulated tokens within the `text` string.  
+- `cap_texts`: Textual information extracted from CAP (Contextual Auxiliary Prompt) annotations.  
+- `cap_images`: Relative paths to visual information from CAP annotations.  
+- `idx_cap_texts`: A binary array where the i-th element indicates whether the i-th celebrity in `cap_texts` is tampered (1 = tampered, 0 = not tampered).  
+- `idx_cap_images`: A binary array where the i-th element indicates whether the i-th celebrity in `cap_images` is tampered (1 = tampered, 0 = not tampered).
+
+### Download data
+
+😊😊😊We provide two versions: SAMM with CAP information and SAMM without CAP information. If you choose SAMM with CAP information, download CAP and place the downloaded `people images` folder into `./code/SAMM-RamDG-CAP/SAMM_datasets`. 
+
+Then place the `train.json`, `val.json`, `test.json` into `./code/SAMM-RamDG-CAP/SAMM_datasets/jsons` and place `emotion_jpg`, `orig_output`, `swap_jpg` into `./code/SAMM-RamDG-CAP/SAMM_datasets`.
+
+```
+./
+├── code
+    └── SAMM-RamDG-CAP (this github repo)
+        ├── configs
+        │   └──...
+        ├── dataset
+        │   └──...
+        ├── models
+        │   └──...
+        ...
+        └── SAMM_datasets
+        │       ├── jsons
+        │       │   ├──train.json
+        │       │   │
+        │       │   ├──test.json
+        │       │   │
+        │       │   └──val.json
+        │       ├── people imgs
+        │       │
+        │       ├── emotion_jpg
+        │       │
+        │       ├── orig_output
+        │       │
+        │       └── swap_jpg
+        ├── models
+        │   
+        └── pytorch_model.bin
+```
+
+## 💻 Training RamDG
+To train RamDG on the SAMM dataset, please modify `train.sh` and then run the following commands:
+```yaml
+bash train.sh
+```
+
+## 💻 Testing RamDG
+
+To test RamDG on the SAMM dataset, please modify `test.sh` and then run the following commands:
+```yaml
+bash test.sh
+```
+
+## Benchmark Results
+Here we list the performance comparison of SOTA multi-modal and single-modal methods and our method. Please refer to our paper for more details.
+
+## Model checkpoint
+
+Checkpoint of our trained model on the SAMM: [best-model-checkpoint](https://drive.google.com/file/d/1woS5gWD9u08tgbVHvfUKhe7bbAE3DtDo/view?usp=sharing)
+
+## 🤗 Acknowledgements
+We borrow some codes from [DGM4](https://github.com/rshaojimmy/MultiModal-DeepFake) and pre-trained weights from [ALBEF](https://github.com/salesforce/ALBEF). Thanks for their wonderful work!
+
+## Citation
+If you find this work useful for your research, please kindly cite our paper:
+
+
 
 
 
