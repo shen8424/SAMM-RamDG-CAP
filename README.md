@@ -1,2 +1,2 @@
-# SAMM-RamDG-CAP
+# Beyond Artificial Misalignment: Detecting and Grounding Semantic-Coordinated Multimodal Manipulations
 (ACM MM2025) Official code for paper "Beyond Artificial Misalignment: Detecting and Grounding Semantic-Coordinated Multimodal Manipulations" .
