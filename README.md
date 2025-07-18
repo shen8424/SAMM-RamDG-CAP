@@ -10,19 +10,24 @@
 </div>
 </div>
 
+<h4 align="center">
+  <a href="" target='_blank'>[ACM MM Paper]</a> |
+  <a href="https://huggingface.co/datasets/SJJ0854/SAMM" target='_blank'>[Dataset]</a>
+</h4>
+
 ## News
 
 - [07/2025] RamDG Code is released.
 
 ## Introduction
 
+<img src='./figures/teaser.png' width='90%'>
+
 This is the official implementation of *SAMM* and *RamDG*. We propose a realistic research scenario: detecting and grounding semantic-coordinated multimodal manipulations, and introduce a new dataset SAMM. To address this challenge, we design the RamDG framework, proposing a novel approach for detecting fake news by leveraging external knowledge.
 
 The framework of the proposed RamDG:
 
-
-
-
+<img src='./figures/RamDG.png' width='90%'>
 
 ## 🔧 Dependencies and Installation
 
@@ -73,7 +78,7 @@ We present <b>SAMM</b>, a large-scale dataset for Detecting and Grounding Semant
 
 **Dataset Statistics:**
 <div align="center">
-<img src='./samm_statistics.png' width='90%'>
+<img src='./figures/samm_statistics.png' width='90%'>
 </div>
 
 ### Celeb Attributes Portfolio (CAP)
@@ -81,6 +86,10 @@ We present <b>SAMM</b>, a large-scale dataset for Detecting and Grounding Semant
 We present <b>CAP</b>, a large-scale database including over 80k celebrities. Each celebrity in the CAP has three associated images along with their gender, birth year, occupation, and main achievements.
 
 Two examples from CAP:
+
+<div align="center">
+<img src='./figures/cap.png' width='40%'>
+</div>
 
 ### Annotations
 ```
@@ -182,6 +191,8 @@ bash test.sh
 
 ## Benchmark Results
 Here we list the performance comparison of SOTA multi-modal and our method. Please refer to our paper for more details.
+
+<img src='./figures/benchmark_results.png' width='90%'>
 
 ## Model checkpoint
 
