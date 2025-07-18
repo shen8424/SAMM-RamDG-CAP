@@ -26,7 +26,7 @@
 ## Notes⚠️
 
 - The SAMM dataset is large. For the convenience of downloading and usage, we provide two download options for SAMM and CAP: Hugging Face and Baidu Pan. <a href="https://huggingface.co/datasets/SJJ0854/SAMM" target='_blank'>[SAMM HF] 
-- If you want to import the CAP data into your own dataset, please refer to [this].
+- If you want to import the CAP data into your own dataset, please refer to [this](https://github.com/shen8424/CAP).
 ## News
 
 - [07/2025] RamDG Code is released.
@@ -106,7 +106,7 @@ Two examples from CAP:
 
 #### Import CAP into other datasets.🤗🤗🤗
 
-If you want to import the CAP data into your own dataset, please refer to [this].
+If you want to import the CAP data into your own dataset, please refer to [this](https://github.com/shen8424/CAP).
 
 ### Annotations
 ```
