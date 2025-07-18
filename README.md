@@ -8,16 +8,29 @@
   Pu Nan<sup>2</sup></a>
   Zhun Zhong<sup>1</sup></a>
 </div>
+
+<div>
+    <sup>1</sup>Hefei University of Technology
+    <br>
+    <sup>2</sup> University
+</div>
 </div>
 
 <h4 align="center">
   <a href="" target='_blank'>[ACM MM Paper]</a> |
-  <a href="https://huggingface.co/datasets/SJJ0854/SAMM" target='_blank'>[Dataset]</a>
+  <a href="https://huggingface.co/datasets/SJJ0854/SAMM" target='_blank'>[Dataset HF<img width="20" height="20" alt="image" src="https://github.com/user-attachments/assets/88b9b5c7-132e-4589-aedf-4e3ccd15732c" />
+]</a> |
+  <a href="" target='_blank'>[CAP]</a>
 </h4>
+
+## Notes⚠️
+
+The SAMM dataset is large. For the convenience of downloading and usage, we provide two download options for SAMM and CAP: Hugging Face and Baidu Pan. <a href="https://huggingface.co/datasets/SJJ0854/SAMM" target='_blank'>[SAMM HF] 
 
 ## News
 
 - [07/2025] RamDG Code is released.
+- [07/2025] Our paper is accepted by ACM MM2025🎉🎉🎉.
 
 ## Introduction
 
