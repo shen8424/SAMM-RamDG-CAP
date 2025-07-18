@@ -25,8 +25,7 @@
 
 ## Notes⚠️
 
-- The SAMM dataset is large. For the convenience of downloading and usage, we provide two download options for SAMM and CAP: Hugging Face and Baidu Pan.  
-  [SAMM HF](https://huggingface.co/datasets/SJJ0854/SAMM) | [SAMM Baidu-Pan](https://pan.baidu.com/s/1Mw9sPTEqq8CRMdqePgOc2g?pwd=8yv8)
+- The SAMM dataset is large. For the convenience of downloading and usage, we provide two download options for SAMM and CAP: Hugging Face and Baidu Pan.  [SAMM HF](https://huggingface.co/datasets/SJJ0854/SAMM) | [SAMM Baidu-Pan](https://pan.baidu.com/s/1Mw9sPTEqq8CRMdqePgOc2g?pwd=8yv8) 
 - If you want to import the CAP data into your own dataset, please refer to [this](https://github.com/shen8424/CAP).
 
 ## News
