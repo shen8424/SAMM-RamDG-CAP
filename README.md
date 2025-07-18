@@ -84,24 +84,24 @@ Two examples from CAP:
 
 ### Annotations
 ```
-     {
-        "text": "Philippe Claudel steps up a slots his one home advantage Argentina",
-        "fake_cls": "swap_manipulation",
-        "image": "swap_jpg/26717.jpg",
-        "id": 9,
+    {
+        "text": "Lachrymose Terri Butler, whose letter prompted Peter Dutton to cancel Troy Newman's visa, was clearly upset.",
+        "fake_cls": "attribute_manipulation",
+        "image": "emotion_jpg/65039.jpg",
+        "id": 13,
         "fake_image_box": [
-            941,
-            119,
-            1039,
-            238
+            665,
+            249,
+            999,
+            671
         ],
         "cap_texts": {
-            "Philippe Claudel": "Philippe Claudel Gender: Male, Occupation: Writer and filmmaker, Birth year: 1962, Main achievement: Author of \"Brodeck's Report\"",
-            "Philippe": "Philippe Gender: Male, Occupation: Prince, Birth year: 1960, Main achievement: King of Belgium since 2013"
+            "Terri Butler": "Terri Butler Gender: Female, Occupation: Politician, Birth year: 1977, Main achievement: Member of Australian Parliament.",
+            "Peter Dutton": "Peter Dutton Gender: Male, Occupation: Politician, Birth year: 1970, Main achievement: Australian Minister for Defence."
         },
         "cap_images": {
-            "Philippe Claudel": "people images/Philippe Claudel",
-            "Philippe": "people images/Philippe"
+            "Terri Butler": "Terri Butler",
+            "Peter Dutton": "Peter Dutton"
         },
         "idx_cap_texts": [
             1,
@@ -113,9 +113,12 @@ Two examples from CAP:
         ],
         "fake_text_pos": [
             0,
-            1
+            11,
+            13,
+            14,
+            15
         ]
-     }
+    }
 ```
 
 - `image`: The relative path to the original or manipulated image.  
@@ -178,7 +181,7 @@ bash test.sh
 ```
 
 ## Benchmark Results
-Here we list the performance comparison of SOTA multi-modal and single-modal methods and our method. Please refer to our paper for more details.
+Here we list the performance comparison of SOTA multi-modal and our method. Please refer to our paper for more details.
 
 ## Model checkpoint
 
