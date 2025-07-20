@@ -12,7 +12,7 @@
 <div>
     <sup>1</sup>Hefei University of Technology
     <br>
-    <sup>2</sup> University
+    <sup>2</sup> University of Trento
 </div>
 </div>
 
