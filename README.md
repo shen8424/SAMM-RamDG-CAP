@@ -30,6 +30,7 @@
 
 ## News
 
+- [07/2025] SAMM is released.
 - [07/2025] RamDG Code is released.
 - [07/2025] Our paper is accepted by ACM MM2025🎉🎉🎉.
 
