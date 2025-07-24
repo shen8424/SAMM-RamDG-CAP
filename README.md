@@ -100,7 +100,7 @@ We present <b>SAMM</b>, a large-scale dataset for Detecting and Grounding Semant
 
 ### Celeb Attributes Portfolio (CAP)
 
-We present <b>CAP</b>, a large-scale database including over 80k celebrities. Each celebrity in the CAP has three associated images along with their gender, birth year, occupation, and main achievements.
+We present <b>CAP</b>, a large-scale database including over 70k celebrities. Each celebrity in the CAP has at least three associated images along with their gender, birth year, occupation, and main achievements.
 
 Two examples from CAP:
 
