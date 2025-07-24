@@ -23,16 +23,17 @@
   <a href="" target='_blank'>[CAP]</a>
 </h4>
 
-## Notes⚠️
+## Notes ⚠️
 
 - The SAMM dataset is large. For the convenience of downloading and usage, we provide two download options for SAMM and CAP: Hugging Face and Baidu Pan.  [SAMM HF](https://huggingface.co/datasets/SJJ0854/SAMM) | [SAMM Baidu-Pan](https://pan.baidu.com/s/1Mw9sPTEqq8CRMdqePgOc2g?pwd=8yv8) 
 - If you want to import the CAP data into your own dataset, please refer to [this](https://github.com/shen8424/CAP).
+- If you want to run RamDG on datasets other than SAMM and use CNCL to incorporate external knowledge, please ensure to configure ```idx_cap_texts``` and ```idx_cap_images``` in the dataset jsons.
 
 ## News
 
 - [07/2025] SAMM is released.
 - [07/2025] RamDG Code is released.
-- [07/2025] Our paper is accepted by ACM MM2025🎉🎉🎉.
+- [07/2025] Our paper is accepted by ACM MM2025 🎉🎉🎉.
 
 ## Introduction
 
