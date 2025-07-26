@@ -163,7 +163,7 @@ If you want to import the CAP data into your own dataset, please refer to [this]
 
 ### Download data
 
-😊😊😊We provide two versions: SAMM with CAP information and SAMM without CAP information. If you choose SAMM with CAP information, download CAP and place the downloaded `people_imgs` folder into `./code/SAMM-RamDG-CAP/SAMM_datasets`. 
+😊😊😊We provide two versions: SAMM with CAP information and SAMM without CAP information. If you choose SAMM with CAP information, download `people_imgs1` and `people_imgs2`, then move the data from both folders to `./code/SAMM-RamDG-CAP/SAMM_datasets/people_imgs`.
 
 Then place the `train.json`, `val.json`, `test.json` into `./code/SAMM-RamDG-CAP/SAMM_datasets/jsons` and place `emotion_jpg`, `orig_output`, `swap_jpg` into `./code/SAMM-RamDG-CAP/SAMM_datasets`.
 
