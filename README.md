@@ -186,6 +186,9 @@ Then place the `train.json`, `val.json`, `test.json` into `./code/SAMM-RamDG-CAP
         │       │   │
         │       │   └──val.json
         │       ├── people_imgs
+        │       │   ├──Messi (from people_imgs1)
+        │       │   ├──Trump (from people_imgs2)
+        │       │   └──... 
         │       │
         │       ├── emotion_jpg
         │       │
