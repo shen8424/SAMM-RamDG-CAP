@@ -40,7 +40,7 @@ from scipy.interpolate import interp1d
 
 from models import box_ops
 from tools.multilabel_metrics import AveragePrecisionMeter, get_multi_label
-from models.RamDG import HAMMER
+from models.RamDG import RamDG
 
 def setlogger(log_file):
     filehandler = logging.FileHandler(log_file)
@@ -119,7 +119,7 @@ def extra_text_input_adjust(text_input1,  device):
     # input_ids adaptation
     input_ids_remove_SEP = [x[:-1] for x in text_input1.input_ids]
     maxlen = max([len(x) for x in text_input1.input_ids])-1
-    input_ids_remove_SEP_pad = [x + [0] * (maxlen - len(x)) for x in input_ids_remove_SEP] # only remove SEP as HAMMER is conducted with text with CLS
+    input_ids_remove_SEP_pad = [x + [0] * (maxlen - len(x)) for x in input_ids_remove_SEP]
     text_input1.input_ids = torch.LongTensor(input_ids_remove_SEP_pad).to(device)
 
     # attention_mask adaptation
@@ -133,7 +133,7 @@ def text_input_adjust(text_input, fake_word_pos, device):
     # input_ids adaptation
     input_ids_remove_SEP = [x[:-1] for x in text_input.input_ids]
     maxlen = max([len(x) for x in text_input.input_ids])-1
-    input_ids_remove_SEP_pad = [x + [0] * (maxlen - len(x)) for x in input_ids_remove_SEP] # only remove SEP as HAMMER is conducted with text with CLS
+    input_ids_remove_SEP_pad = [x + [0] * (maxlen - len(x)) for x in input_ids_remove_SEP]
     text_input.input_ids = torch.LongTensor(input_ids_remove_SEP_pad).to(device)
 
     # attention_mask adaptation
@@ -469,7 +469,7 @@ def main_worker(gpu, args, config):
     #### Model #### 
     if args.log:
         print(f"Creating RamDG")
-    model = HAMMER(args=args, config=config, text_encoder=args.text_encoder, tokenizer=tokenizer, init_deit=True)
+    model = RamDG(args=args, config=config, text_encoder=args.text_encoder, tokenizer=tokenizer, init_deit=True)
     model = model.to(device)   
         
     arg_opt = utils.AttrDict(config['optimizer'])
