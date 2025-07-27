@@ -3,7 +3,7 @@ from torch.utils.data import DataLoader
 from torchvision import transforms
 from PIL import Image
 
-from dataset.dataset import DGM4_Dataset
+from dataset.dataset import SAMM
 from dataset.randaugment import RandomAugment
 
 def create_dataset(config):
@@ -22,8 +22,8 @@ def create_dataset(config):
         normalize,
         ])  
     
-    train_dataset = DGM4_Dataset(config=config, ann_file=config['train_file'], transform=train_transform, max_words=config['max_words'], is_train=True)              
-    val_dataset = DGM4_Dataset(config=config, ann_file=config['val_file'], transform=test_transform, max_words=config['max_words'], is_train=False)              
+    train_dataset = SAMM(config=config, ann_file=config['train_file'], transform=train_transform, max_words=config['max_words'], is_train=True)              
+    val_dataset = SAMM(config=config, ann_file=config['val_file'], transform=test_transform, max_words=config['max_words'], is_train=False)              
     return train_dataset, val_dataset    
     
 def create_sampler(datasets, shuffles, num_tasks, global_rank):
