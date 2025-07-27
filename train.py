@@ -40,7 +40,7 @@ from scipy.interpolate import interp1d
 
 from models import box_ops
 from tools.multilabel_metrics import AveragePrecisionMeter, get_multi_label
-from models.HAMMER import HAMMER
+from models.RamDG import HAMMER
 
 def setlogger(log_file):
     filehandler = logging.FileHandler(log_file)
