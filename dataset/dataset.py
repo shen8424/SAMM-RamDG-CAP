@@ -18,7 +18,7 @@ import math
 import random
 from random import random as rand
 
-class DGM4_Dataset(Dataset):
+class SAMM(Dataset):
     def __init__(self, config, ann_file, transform, max_words=30, is_train=True): 
         
         self.root_dir = config["images_file"]       
