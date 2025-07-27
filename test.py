@@ -43,7 +43,7 @@ from scipy.interpolate import interp1d
 from models import box_ops
 from tools.multilabel_metrics import AveragePrecisionMeter, get_multi_label
 
-from models.HAMMER import HAMMER
+from models.RamDG import RamDG
 
 def setlogger(log_file):
     filehandler = logging.FileHandler(log_file)
@@ -331,7 +331,7 @@ def main_worker(gpu, args, config):
     #### Model ####
     if args.log:
         print(f"Creating RamDG")
-    model = HAMMER(args=args, config=config, text_encoder=args.text_encoder, tokenizer=tokenizer, init_deit=True, is_train=False)
+    model = RamDG(args=args, config=config, text_encoder=args.text_encoder, tokenizer=tokenizer, init_deit=True, is_train=False)
     model = model.to(device)
 
     checkpoint_dir = args.checkpoint_dir
