@@ -13,7 +13,7 @@ from models import box_ops
 from tools.multilabel_metrics import get_multi_label
 from timm.models.layers import trunc_normal_
 
-class HAMMER(nn.Module):
+class RamDG(nn.Module):
     def __init__(self, 
                  args = None, 
                  config = None,               
