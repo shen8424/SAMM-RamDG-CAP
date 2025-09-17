@@ -17,7 +17,7 @@
 </div>
 
 <h4 align="center">
-  <a href="" target='_blank'>[ACM MM Paper]</a> |
+  <a href="" target='_blank'>[ACM MM Paper]<a href="https://arxiv.org/abs/2509.12653"> |
   <a href="https://huggingface.co/datasets/SJJ0854/SAMM" target='_blank'>[Dataset HF<img width="20" height="20" alt="image" src="https://github.com/user-attachments/assets/88b9b5c7-132e-4589-aedf-4e3ccd15732c" />
 ]</a> |
   <a href="https://huggingface.co/datasets/SJJ0854/CAP" target='_blank'>[CAP HF]</a>
